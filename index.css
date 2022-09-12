@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to right , blue, red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px 50px rgba(194, 17, 17, 0.5);
+    border-radius: 20px;
+}
+.text::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height:100%;
+    /* background: rgb(134, 35, 35); */
+}
+.text a{
+    color: white;
+    font-size: 50px;
+    text-decoration: none;
+    padding: 20px;
+    z-index: 100;
+}
+.text span:first-child{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to left ,black, blue);
+    animation: animate1 1s linear infinite;
+    
+}
+@keyframes animate1  {
+   0%{
+    transform: translateX(100%);
+   }
+   100%{
+    transform: translateX(-100%);
+   }
+}
+.text span:nth-child(2){
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 10px;
+    background: linear-gradient(to bottom ,black, blue);
+    animation: animate2 1s linear infinite;
+
+}
+@keyframes animate2  {
+    0%{
+     transform: translateY(-100%);
+    }
+    100%{
+     transform: translateY(100%);
+    }
+ }
+
+.text span:nth-child(3){
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 10px;
+    width: 100%;
+    background: linear-gradient(to right ,black, blue);
+    animation: animate3 1s linear  infinite;
+   
+}
+@keyframes animate3  {
+    0%{
+     transform: translateX(-100%);
+    }
+    100%{
+     transform: translateX(100%);
+    }
+ }
+
+.text span:nth-child(4){
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 10px;
+    background: linear-gradient(to bottom ,blue, black);
+    animation: animate4 1s linear infinite;
+    
+}
+@keyframes animate4  {
+    0%{
+     transform: translateY(100%);
+    }
+    100%{
+     transform: translateY(-100%);
+    }
+ }
